@@ -1,0 +1,136 @@
+﻿@page
+@model WebClient_Ajax.Pages.manage.product.UpdateModel
+@{
+}
+
+<section class="bg-white">
+    <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16 border border-slate-400 rounded-xl my-16">
+        <div class="w-full flex items-center justify-between">
+            <h2 class="mb-4 text-xl font-bold text-gray-900">Update Product</h2>
+            <a asp-area="" asp-page="/manage/product/Index" class="mb-4 text-base text-slate-700">&lt; Back to List</a>
+        </div>
+        <form action="#" id="UpdateProductForm">
+            <input type="hidden" value="productId" name="productId" id="productId" />
+            <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                <div class="sm:col-span-2">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Product Name</label>
+                    <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " value="" placeholder="Type product name" required="">
+                </div>
+                <div class="w-full">
+                    <label for="price" class="block mb-2 text-sm font-medium text-gray-900 ">Price</label>
+                    <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " value="" placeholder="Price" required="">
+                </div>
+                <div class="w-full">
+                    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Description</label>
+                    <input type="text" name="description" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " value="" placeholder="Description" required="">
+                </div>
+                <div>
+                    <label for="category" class="block mb-2 text-sm font-medium text-gray-900 ">Category</label>
+                    <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 ">
+                        <option selected="">Electronics</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button type="submit" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    Create product
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        const user = JSON.parse(localStorage.getItem("user"))
+        const token = localStorage.getItem("token")
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id")
+
+        if (user.role.name != "Admin") {
+            alert("Your account do not have sufficient access rights")
+            window.location.href = "/manage/product"
+        }
+
+        function fetchCategoryData() {
+            $("#category").html("")
+            $.ajax({
+                url: "http://localhost:5201/api/category",
+                type: "get",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                error: function (reason) {
+                    console.error(reason);
+                },
+                success: function (res) {
+                    $.each(res, function (idx, value) {
+                        $("#category").append(`
+                                     <option value="${value.categoryId}">${value.name}</option>
+                                `)
+                    })
+                }
+            })
+        }
+        fetchCategoryData();
+
+        function fetchCurrentProduct() {
+            $("#category").html("")
+            $.ajax({
+                url: "http://localhost:5201/api/product/" + id,
+                type: "get",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                error: function (reason) {
+                    console.error(reason);
+                },
+                success: function (res) {
+                    $("#name").val(res.name);
+                    $("#price").val(res.price);
+                    $("#description").val(res.description);
+                    $("#category").val(res.category.categoryId);
+                }
+            })
+        }
+
+        fetchCurrentProduct();
+
+
+        $('#UpdateProductForm').on('submit', function (e) {
+            e.preventDefault();
+
+            var name = $('#name').val();
+            var price = $('#price').val();
+            var description = $('#description').val();
+            var category = $('#category').val();
+
+            $.ajax({
+                url: 'http://localhost:5201/api/product/' + id,
+                type: 'PUT',
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                data: JSON.stringify({
+                    productId: id,
+                    name,
+                    price,
+                    description,
+                    categoryId: category,
+                }),
+                success: function (data) {
+                    alert('Update product successfully');
+                    window.location.href = "http://localhost:5292/manage/product"
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        });
+    });
+
+</script>
