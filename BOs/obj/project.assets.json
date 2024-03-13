@@ -4354,11 +4354,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\BOs\\BOs.csproj",
+      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\BOs\\BOs.csproj",
       "projectName": "BOs",
-      "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\BOs\\BOs.csproj",
+      "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\BOs\\BOs.csproj",
       "packagesPath": "C:\\Users\\tienh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\BOs\\obj\\",
+      "outputPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\BOs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tienh\\AppData\\Roaming\\NuGet\\NuGet.Config",

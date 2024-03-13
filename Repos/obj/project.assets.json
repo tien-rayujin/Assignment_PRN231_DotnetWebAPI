@@ -3134,11 +3134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\Repos\\Repos.csproj",
+      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj",
       "projectName": "Repos",
-      "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\Repos\\Repos.csproj",
+      "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj",
       "packagesPath": "C:\\Users\\tienh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\Repos\\obj\\",
+      "outputPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Repos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tienh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3155,8 +3155,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\DAOs\\DAOs.csproj": {
-              "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\DAOs\\DAOs.csproj"
+            "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\DAOs\\DAOs.csproj": {
+              "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\DAOs\\DAOs.csproj"
             }
           }
         }

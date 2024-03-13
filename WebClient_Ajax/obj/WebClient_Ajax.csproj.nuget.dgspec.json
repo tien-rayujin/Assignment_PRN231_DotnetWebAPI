@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\WebClient_Ajax\\WebClient_Ajax.csproj": {}
+    "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\WebClient_Ajax\\WebClient_Ajax.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\WebClient_Ajax\\WebClient_Ajax.csproj": {
+    "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\WebClient_Ajax\\WebClient_Ajax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\WebClient_Ajax\\WebClient_Ajax.csproj",
+        "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\WebClient_Ajax\\WebClient_Ajax.csproj",
         "projectName": "WebClient_Ajax",
-        "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\WebClient_Ajax\\WebClient_Ajax.csproj",
+        "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\WebClient_Ajax\\WebClient_Ajax.csproj",
         "packagesPath": "C:\\Users\\tienh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_solution\\WebClient_Ajax\\obj\\",
+        "outputPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\WebClient_Ajax\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tienh\\AppData\\Roaming\\NuGet\\NuGet.Config",
