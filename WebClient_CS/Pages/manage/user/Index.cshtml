@@ -1,6 +1,9 @@
 ﻿@page
 @model WebClient_CS.Pages.manage.user.UserModel
 @{
+    var pageIndex = HttpContext.Session.GetInt32("PageIndex");
+    var prevPage = pageIndex == 1 ? pageIndex - 1 : 1;
+    var nextPage = pageIndex + 1;
 }
 
 <div class="w-3/4 mx-auto py-16">
@@ -99,7 +102,7 @@
         </table>
     </div>
     <div class="mt-4 w-full flex items-center justify-center gap-5 font-semibold">
-        <button id="prev" class="p-3 bg-green-300 rounded-xl text-white w-8 h-8 flex items-center justify-center text-base"><i class="fa-solid fa-chevron-left"></i></button>
-        <button id="next" class="p-3 bg-green-300 rounded-xl text-white w-8 h-8 flex items-center justify-center text-base"><i class="fa-solid fa-chevron-right"></i></button>
+        <a asp-page="/manage/user/Index" asp-route-CurrentPage="@prevPage" class="p-3 bg-green-300 rounded-xl text-white w-8 h-8 flex items-center justify-center text-base"><i class="fa-solid fa-chevron-left"></i></a>
+        <a asp-page="/manage/user/Index" asp-route-CurrentPage="@nextPage" class="p-3 bg-green-300 rounded-xl text-white w-8 h-8 flex items-center justify-center text-base"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
 </div>

@@ -15,9 +15,21 @@ public class ProductModel : PageModel
 
     public List<BOs.Product> Products { get; set; }
 
-    public async Task<IActionResult> OnGetAsync()
+    public string SearchString { get; set; }
+
+    public readonly int pageSize = 3;
+
+    public async Task<IActionResult> OnGetAsync(int CurrentPage = 1)
     {
-        var userSession = HttpContext.Session.GetString("user");
+        var session = HttpContext.Session;
+        if(session.GetInt32("PageIndex") == null)
+        {
+            session.SetInt32("PageIndex", 1);
+        }
+        session.SetInt32("PageIndex", CurrentPage);
+
+
+        var userSession = session.GetString("user");
         if (userSession == null) return RedirectToPage("/auth/Login");
         var userObject = _apiService.Json2O<Account>(userSession);
         if (userObject != null && userObject.Role.Name.ToLower().Equals("user"))
@@ -26,9 +38,9 @@ public class ProductModel : PageModel
             return RedirectToPage("/auth/Login");
         }
         // get required token to perform request
-        var token = HttpContext.Session.GetString("token");
+        var token = session.GetString("token");
 
-        var requestUri = "http://localhost:5201/api/Product";
+        var requestUri = $"http://localhost:5201/api/Product?$top=" + pageSize + "&$skip=" + (CurrentPage - 1)*pageSize;
         var responseData = await _apiService.SendGetRequest<List<BOs.Product>>(requestUri, token);
         Products = responseData;
 
