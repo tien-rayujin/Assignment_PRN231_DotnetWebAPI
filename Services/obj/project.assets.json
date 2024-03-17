@@ -3152,11 +3152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_PRN231_DotnetWebAPI\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Services\\Services.csproj",
+      "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_PRN231_DotnetWebAPI\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\tienh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Services\\obj\\",
+      "outputPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_PRN231_DotnetWebAPI\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tienh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3173,8 +3173,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj": {
-              "projectPath": "C:\\Users\\tienh\\OneDrive\\Desktop\\Test\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj"
+            "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj": {
+              "projectPath": "C:\\Users\\tienh\\OneDrive\\Documents\\Workspace\\dotNET\\Assignment_PRN231_DotnetWebAPI\\Repos\\Repos.csproj"
             }
           }
         }

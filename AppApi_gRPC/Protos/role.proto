@@ -1,0 +1,25 @@
+﻿syntax = "proto3";
+package role;
+option csharp_namespace = "AppApi_gRPC";
+
+message EmptyRole {}
+message Role {
+	string roleId = 1;
+	string name = 2;
+}
+
+message Roles {
+	repeated Role items = 1;
+}
+
+message RoleFilter {
+	string roleId = 1;
+}
+
+service RoleCRUD {
+	rpc GetAll (EmptyRole) returns (Roles);
+	rpc Get (RoleFilter) returns (Role);
+	rpc Create (Role) returns (EmptyRole);
+	rpc Update (Role) returns (EmptyRole);
+	rpc Delete (RoleFilter) returns (EmptyRole);
+}

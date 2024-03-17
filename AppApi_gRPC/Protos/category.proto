@@ -1,0 +1,25 @@
+﻿syntax = "proto3";
+package category;
+option csharp_namespace = "AppApi_gRPC";
+
+message EmptyCategory {}
+message Category {
+	string categoryId = 1;
+	string name = 2;
+}
+
+message Categorys {
+	repeated Category items = 1;
+}
+
+message CategoryFilter {
+	string categoryId = 1;
+}
+
+service CategoryCRUD {
+	rpc GetAll (EmptyCategory) returns (Categorys);
+	rpc Get (CategoryFilter) returns (Category);
+	rpc Create (Category) returns (EmptyCategory);
+	rpc Update (Category) returns (EmptyCategory);
+	rpc Delete (CategoryFilter) returns (EmptyCategory);
+}

@@ -1,0 +1,8 @@
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\WebClient_CS_gRPC.exe
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\WebClient_CS_gRPC.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tienh\OneDrive\Documents\Workspace\dotNET\Assignment_PRN231_DotnetWebAPI\WebClient_CS_gRPC\bin\Debug\net8.0\AppApi_gRPC.dll

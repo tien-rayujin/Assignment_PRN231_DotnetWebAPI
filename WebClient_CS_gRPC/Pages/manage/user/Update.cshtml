@@ -1,0 +1,51 @@
+﻿@page
+@model WebClient_CS.Pages.manage.user.UpdateModel
+@{
+}
+
+
+<section class="bg-white">
+    <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16 border border-slate-400 rounded-xl my-16">
+        <div class="w-full flex items-center justify-between">
+            <h2 class="mb-4 text-xl font-bold text-gray-900">Update User</h2>
+            <a asp-area="" asp-page="/manage/user/Index" class="mb-4 text-base text-slate-700">&lt; Back to List</a>
+        </div>
+        <form method="post">
+            <input type="hidden" name="AccountId" asp-for="RequestModel.AccountId" />
+            <input type="hidden" name="IsActive" asp-for="RequestModel.IsActive" />
+            <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                <div class="sm:col-span-2">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">User Name</label>
+                    <input type="text" name="Name" asp-for="RequestModel.Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " placeholder="Type user name" required="">
+                </div>
+                <div class="w-full">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+                    <input type="email" name="Email" asp-for="RequestModel.Email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " placeholder="Email" required="">
+                </div>
+                <div class="w-full">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+                    <input type="text" name="Password" asp-for="RequestModel.Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " placeholder="Password" required="">
+                </div>
+                <div>
+                    <label for="role" class="block mb-2 text-sm font-medium text-gray-900 ">Role</label>
+                    <select name="RoleId" asp-for="RequestModel.RoleId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 ">
+                        @foreach (var item in Model.Roles.Items)
+                        {
+                            <option value="@item.RoleId">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="w-full">
+                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 ">Phone</label>
+                    <input type="number" name="Phone" asp-for="RequestModel.Phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 " placeholder="Phone" required="">
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button type="submit" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    Update User
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+

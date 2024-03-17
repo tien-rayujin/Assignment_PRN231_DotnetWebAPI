@@ -1,0 +1,29 @@
+syntax = "proto3";
+package product;
+option csharp_namespace = "AppApi_gRPC";
+
+message EmptyProduct {}
+message Product {
+	string productId = 1;
+	string name = 2;
+	int32 price = 3;
+	string description = 4;
+	bool isActive = 5;
+	string categoryId = 6;
+}
+
+message Products {
+	repeated Product items = 1;
+}
+
+message ProductFilter {
+	string productId = 1;
+}
+
+service ProductCRUD {
+	rpc GetAll (EmptyProduct) returns (Products);
+	rpc Get (ProductFilter) returns (Product);
+	rpc Create (Product) returns (EmptyProduct);
+	rpc Update (Product) returns (EmptyProduct);
+	rpc Delete (ProductFilter) returns (EmptyProduct);
+}

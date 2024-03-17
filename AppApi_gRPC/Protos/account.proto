@@ -1,0 +1,30 @@
+syntax = "proto3";
+package account;
+option csharp_namespace = "AppApi_gRPC";
+
+message EmptyAccount {}
+message Account {
+	string accountId = 1;
+	string name = 2;
+	string email = 3;
+	string password = 4;
+	bool isActive = 5;
+	string roleId = 6;
+	string phone = 7;
+}
+
+message Accounts {
+	repeated Account items = 1;
+}
+
+message AccountFilter {
+	string accountId = 1;
+}
+
+service AccountCRUD {
+	rpc GetAll (EmptyAccount) returns (Accounts);
+	rpc Get (AccountFilter) returns (Account);
+	rpc Create (Account) returns (EmptyAccount);
+	rpc Update (Account) returns (EmptyAccount);
+	rpc Delete (AccountFilter) returns (EmptyAccount);
+}
